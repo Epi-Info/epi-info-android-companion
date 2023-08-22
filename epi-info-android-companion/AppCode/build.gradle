@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 29
 
@@ -7,10 +8,6 @@ android {
         exclude 'META-INF/ASL2.0'
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
-    }
-
-    dexOptions {
-        javaMaxHeapSize "4g"
     }
 
     defaultConfig {
