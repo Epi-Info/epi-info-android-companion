@@ -2,18 +2,18 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
 
     packagingOptions {
-        exclude 'META-INF/ASL2.0'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/NOTICE'
+        resources {
+            excludes += ['META-INF/ASL2.0', 'META-INF/LICENSE', 'META-INF/NOTICE']
+        }
     }
 
     defaultConfig {
         applicationId "gov.cdc.epiinfo"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 34
         multiDexEnabled true
     }
 
@@ -32,6 +32,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    namespace 'gov.cdc.epiinfo'
 }
 
 dependencies {
